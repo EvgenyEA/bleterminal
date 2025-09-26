@@ -1,0 +1,145 @@
+*:focus {
+  outline: none;
+}
+
+html,
+body,
+.app {
+  height: 100%;
+  max-height: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: #ffffff;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: "Roboto Mono", monospace;
+  font-size: 16px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background: none;
+  border: none;
+  color: rgba(0, 0, 0, 0.87);
+  cursor: pointer;
+  margin: 0;
+  padding: 12px;
+  transition: background 0.3s, color 0.3s;
+  user-select: none;
+}
+button:active {
+  background: rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.54);
+}
+button i.material-icons {
+  vertical-align: middle;
+}
+
+button i.led1_handle {
+  color: rgba(30, 30, 0, 0.54);
+}
+
+.toolbar {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+}
+.toolbar .name {
+  flex-grow: 1;
+  padding: 0 8px;
+  user-select: none;
+}
+.toolbar .buttons {
+  flex-shrink: 0;
+}
+.toolbar .buttons button {
+  float: left;
+}
+
+.terminal {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-width: 1px 0;
+  flex-grow: 1;
+  overflow: auto;
+  padding: 4px 0;
+}
+.terminal div {
+  color: #9E9E9E;
+  line-height: 1;
+  padding: 4px 8px;
+  word-break: break-word;
+}
+.terminal div.error {
+  color: #F44336;
+}
+.terminal div.incoming {
+  color: #4CAF50;
+}
+.terminal div.outgoing {
+  color: #2196F3;
+}
+
+.message-form {
+  display: flex;
+  flex-shrink: 0;
+}
+.message-form input {
+  background: none;
+  border: none;
+  color: rgba(0, 0, 0, 0.87);
+  flex-grow: 1;
+  font: normal 16px/1.5 "Roboto Mono", monospace;
+  padding: 0 8px;
+}
+.message-form input::placeholder {
+  color: rgba(0, 0, 0, 0.54);
+}
+.message-form button {
+  flex-shrink: 0;
+}
+
+/* Width of the outside container */
+.slidecontainer {
+  width: 100%; 
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
