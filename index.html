@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8" />
 
   <meta name="apple-mobile-web-app-title" content="Terminal" />
@@ -22,43 +21,103 @@
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-  <link rel="stylesheet" href="css/normalize.css" />
+  <!--<link rel="stylesheet" href="css/normalize.css" />-->
   <link rel="stylesheet" href="css/styles.css" />
 
 </head>
 
 <body>
-
-  <div class="app">
-    <div class="toolbar">
-      <div id="device-name" class="name">Web Bluetooth Terminal</div>
-      <div class="buttons">
-        <button id="connect" type="button" aria-label="Connect">
-          <i class="material-icons">bluetooth_connected</i>
-        </button>
-        <button id="disconnect" type="button" aria-label="Disconnect">
-          <i class="material-icons">bluetooth_disabled</i>
-        </button>    
-      </div>
-    </div>
-    <div id="terminal" class="terminal"></div>
-    <form id="message-form" class="message-form">
-      <input id="message-input" type="text" aria-label="Input" autocomplete="off"
-        placeholder="Type something to send...">
-      <button type="submit" aria-label="Send">
-        <i class="material-icons">send</i>
-      </button>
-    </form>
+    <form id ="terminal_form">
+        <section id="toolbar">
+            <h1>Ландшафтный светильник GL-1</h1>
+            <div class="buttons">
+                <button id ="connect" type="button" aria-label ="Connect">
+                <i class="material-icons">bluetooth_connected</i>
+                </button>
+                <button id="disconnect" type="button" aria-label="Disconnect">
+                  <i class="material-icons">bluetooth_disabled</i>
+                </button>
+            </div>
+        </section>
+        
+        <section id="time_section">
+            <h2>Синхронизация времени</h2>
+            <div class="textcols-item">
+                <p>Местное время</p>
+                <span id="datetime"></span>
+            </div>
+            <div class="textcols-item">
+                <p>Время устройства</p>
+                <span id="device_datatime">30.09.2025</span>
+            </div>
+            <button id ="btn_sync">Синхронизировать</button>
+        </section>
+        
+   
+         </form>
+         
+         <form onsubmit="return false" oninput="level.value = flevel.valueAsNumber">
+            <section id="illumination_mode">
+                <h2>Режим работы</h2>
+                <div>
+                    <input type="checkbox" id="by_illumination" name="option1" value="value1">
+                    <label for="by_illumination">По уровню освещённости</label>
+                    <input name="flevel" id="flying" type="range" min="0" max="100" value="0"> 
+                    <output for="flying" name=level>0</output>/100
+                </div>
     
-    <div class="slidecontainer">
-        <input type="range" min="0" max="4" value="0" class="slider" id="myRange">
-    </div>
-    
-  </div>
+                <div>
+                    <input type="checkbox" id="by_time" name="option1" value="value1">
+                    <label for="by_time">По времени</label>
+                </div>
+                
+                <div class="textcols-item">
+                    <label for="time_enable">включать </label>
+                    <input type="time" id="time_enable"  name="appointment"  min="09:00"  max="18:00"  value="20:30" />
+                </div>
+                
+                <div class="textcols-item">
+                    <label for="time_enable">выключать </label>
+                    <input type="time" id="time_disable"  name="appointment"  min="09:00"  max="18:00"  value="07:00" />
+                </div>
+                <button id ="btn_save_setings">Сохранить настройки</button>
 
-  <script src="js/BluetoothTerminal.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/register-sw.js"></script>
+            </section> 
+             
+            <section id="device_param">
+                <h2>Состояние устройства</h2>
+
+                <div class="imagecols-item">
+                    <figure>
+                    <img src="icons/battery.png" alt="Заряд батареи">
+                    <figcaption>100%</figcaption>
+                    </figure>
+                </div> 
+
+                <div class="imagecols-item">
+                    <figure>
+                    <img src="icons/summer.png" alt="Освещённость">
+                    <figcaption>100%</figcaption>
+                    </figure>
+                </div> 
+
+                <div class="imagecols-item">
+                    <figure>
+                    <img src="icons/temperature.png" alt="Температура">
+                    <figcaption>25°С </figcaption>
+                    </figure>               
+                </div>
+
+            </section> 
+             
+        </form>
+            
+                
+                
+    
+<script src="js/main2.js"></script>
+    
+
 
 </body>
 

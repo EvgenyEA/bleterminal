@@ -161,3 +161,4 @@ slider.onclick = function() {
         logToTerminal(error, 'error');
     }
 };
+
