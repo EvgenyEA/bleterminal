@@ -20,7 +20,8 @@
   <link rel="shortcut icon" href="icons/favicon.ico" />
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--<link rel="stylesheet" href="css/normalize.css" />-->
   <link rel="stylesheet" href="css/styles.css" />
 
@@ -86,33 +87,25 @@
              
             <section id="device_param">
                 <h2>Состояние устройства</h2>
-
-                <div class="imagecols-item">
-                    <figure>
-                    <img src="icons/battery.png" alt="Заряд батареи">
-                    <figcaption>100%</figcaption>
-                    </figure>
-                </div> 
-
-                <div class="imagecols-item">
-                    <figure>
-                    <img src="icons/summer.png" alt="Освещённость">
-                    <figcaption>100%</figcaption>
-                    </figure>
-                </div> 
-
-                <div class="imagecols-item">
-                    <figure>
-                    <img src="icons/temperature.png" alt="Температура">
-                    <figcaption>25°С </figcaption>
-                    </figure>               
+                <div>
+                    <i class="large material-icons">battery_charging_full</i>
+                    <span>100%</span>
+                </div>
+                
+                <div>
+                    <i class="large material-icons">brightness_medium</i>
+                    <span>100%</span>
+                </div>
+                
+                <div>
+                    <i class="large material-icons">title</i>
+                    <span>°С</span>
                 </div>
 
             </section> 
              
         </form>
-            
-                
+                    
                 
     
 <script src="js/main2.js"></script>
