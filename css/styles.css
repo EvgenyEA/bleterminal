@@ -63,15 +63,17 @@ button {
   margin-right: 4%;
 }
 
-.imagecols-item {
+/*.imagecols-item {
   white-space: normal;	
   display: inline-block;
   width: 30%;
   vertical-align: top;
-  line-height: 0.5;
+  line-height: 0.1;
   margin: 0 auto;
   text-align: center;
-}
+}*/
+
+
 
 figcaption {
     margin-top: 10px; 
